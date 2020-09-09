@@ -4,9 +4,9 @@ Shrimpfarm is a project built on Express - Node.js using MongoDB Atlas for the C
 
 1>Clone the project into the local directory.
 
-2>To run the server run ng serve --open on the IDE - Visual Studio Code.
+2>To run the server run npm start.
 
-3>After the server has been executed, upon running the client  built on Angular
+3>After the server has been executed, upon running the client by executing ng serve --open  built on Angular
     http://localhost:4200/ will open on the browser.
 4>The initial page will display an "IAquatic Project" page which will give the option to "View Farms" at the upper left corner.
 
