@@ -1,0 +1,36 @@
+<div class="container" style="padding-top:40px;">
+    <div class="row">
+        <div class="col-md-10 mx-auto">
+            <div class="card">
+                <h3 class="p-2">Add New Pond</h3>
+                <div class="card-body p-4">
+                    <form (ngSubmit)="onFormSubmit()" #pondForm="ngForm" novalidate>
+                        <div class="col-sm-12">
+                            <p class="text-success text-center">{{message}}</p>
+                            <div class="card-body">
+                                <div class="form-group ">
+
+                                    <label for="Name">Name</label>
+                                    <input type="text" class="form-control" placeholder="Enter name" name="name"
+                                        [(ngModel)]="pond.name">
+
+                                </div>
+                                <div class="form-group ">
+                                    <label for="Size">Size</label>
+
+                                    <input type="text" class="form-control" placeholder="Enter Size" name="size"
+                                        [(ngModel)]="pond.size">
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-primary px-10" type="submit">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

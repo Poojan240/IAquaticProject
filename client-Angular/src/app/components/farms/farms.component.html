@@ -1,0 +1,30 @@
+
+<div class="container">
+                <p class="my-5">
+                    <a href="/add-farm" class="btn btn-primary"> Add New Shrimp
+                            Farm</a>
+                </p>
+                <div class="col-md-12">
+                    <table class="table table-striped table-responsive-md">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Farm Name</th>
+                                <th>Update</th>
+                                <th>Delete</th>
+                              
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let farm of farms">
+                                <td><button type="button" class="btn btn-link mr-1" (click)="getFarmDetail(farm._id)">Select</button></td>  
+                              
+                                <td>{{farm.name}}</td>
+                                <td><button type="button" class="btn btn-primary mr-1" (click)="farmEdit(farm._id)">Edit</button>  </td>
+                                <td><button type="button" class="btn btn-danger mr-1" (click)="farmDelete(farm._id)">Delete</button>  </td>                               
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>

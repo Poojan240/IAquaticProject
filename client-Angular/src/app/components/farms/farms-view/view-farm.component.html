@@ -1,0 +1,34 @@
+<div class="container">
+    <h1>Farm Detail</h1>
+    <hr/>
+    <div class="p-2">
+        <h3> {{farm.name}} </h3>
+        <p> Located at <b> {{farm.location}} </b> </p>
+        <b>Farm size : </b> {{total}}
+    </div>
+<hr/>
+    <p class="my-5">
+        <a href="/add-pond" class="btn btn-primary"> Add New Pond</a>
+    </p>
+    <div class="col-md-12">
+        <table class="table table-striped table-responsive-md">
+            <thead>
+                <tr>
+                    <th>Pond Name</th>
+                    <th>Pond Size</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let pond of ponds">
+                    <td>{{pond.name}}</td>
+                    <td>{{pond.size}}</td>
+                    <td><button type="button" class="btn btn-primary mr-1" (click)="pondEdit(pond._id)">Edit</button>
+                    </td>
+                    <td><button type="button" class="btn btn-danger mr-1" (click)="pondDelete(pond._id)" >Delete</button> </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
