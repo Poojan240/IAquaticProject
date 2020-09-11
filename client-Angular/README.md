@@ -4,6 +4,8 @@ Shrimpfarm is a project built on Express - Node.js using MongoDB Atlas for the C
 
 1>Clone the project into the local directory.
 
+2>At the Client-Angular directory install the package by command npm install.
+
 2>To run the server run npm start.
 
 3>After the server has been executed, upon running the client by executing ng serve --open  built on Angular
