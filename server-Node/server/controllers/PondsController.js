@@ -1,14 +1,16 @@
 const { Farm, Pond } = require('../models');
+const User = require('../models/User');
 
 module.exports = {
 	async index(req, res) {
+
 		const ponds = await Pond.find().populate('ponds');
 		res.send(ponds);
 	},
 
 	async store(req, res) {
 		console.log(req.body)
-
+    
 		const pond = new Pond({
 			name: req.body.name,
 			size: req.body.size,

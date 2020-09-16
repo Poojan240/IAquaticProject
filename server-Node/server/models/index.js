@@ -1,4 +1,5 @@
  module.exports = {
 	'Farm': require('./Farm'),
- 	'Pond': require('./Pond'),
+	 'Pond': require('./Pond'),
+	 'Login': require('./User')
 };

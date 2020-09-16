@@ -1,13 +1,16 @@
 const express = require('express'),
+
+
 	path = require('path'),
 	rootPath = path.normalize(__dirname + '/../'),
 	router = express.Router(),
 	{ 
 		HomeController, 
 		FarmsController,
-		PondsController	
+		PondsController	,
+		LoginController
 	} = require('./controllers');
-
+	process.env.SECRET_KEY = 'secret'
 module.exports = function(app){	
 
 	//router.get('/', HomeController.testIndex);
@@ -25,6 +28,14 @@ module.exports = function(app){
 	router.put('/ponds/:id', PondsController.update);
 
 	router.delete('/ponds/remove/:id', PondsController.remove);
+
+	router.get('/profile', LoginController.profile);
+	
+	router.post('/login', LoginController.login);
+
+
+
+
 
 	app.use('/api', router);
 };

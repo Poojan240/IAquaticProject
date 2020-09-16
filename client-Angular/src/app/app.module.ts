@@ -12,13 +12,24 @@ import { AddPondComponent } from './components/ponds/ponds-form/add-pond.compone
 import { FarmService } from './services/farm.service';
 import { ViewFarmComponent } from './components/farms/farms-view/view-farm.component';
 
+import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
+import { HomeComponent } from './components/home/home.component';
+import { AuthenticationService } from './services/authentication.service';
+import { AuthGuardService } from './services/auth-guard.service';
+import { ProfileComponent } from './components/profile/profile.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     FarmsComponent,
     AddFarmComponent,
     AddPondComponent,
-    ViewFarmComponent
+    ViewFarmComponent,
+    RegisterComponent,
+    LoginComponent,
+    HomeComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +37,7 @@ import { ViewFarmComponent } from './components/farms/farms-view/view-farm.compo
     FormsModule,
     AppRoutingModule
   ],
-  providers: [PondService, FarmService],
+  providers: [PondService, FarmService,AuthenticationService,AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
